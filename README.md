@@ -15,7 +15,7 @@ bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
 #### 3.Add camera to iris:
 https://blog.csdn.net/u013083665/article/details/104840286
 
-#### 4.AddTfmini:
+#### 4.Add Tfmini高度传感器:
 https://xindong324.github.io/2020/06/26/mavros%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/
 
 ## 2.Turtlebot3移动小车配置
