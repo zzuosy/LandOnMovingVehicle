@@ -53,11 +53,12 @@ source ./devel/setup.bash
 将turtlebot3_waffle_pi.urdf.xacro移动到~/catkin_ws/src/turtlebot3/turtlebot3_description/urdf中，替换原本的文件  
 将turtlebot3_empty_world.launch移动到~/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/launch中，替换原来的文件  
 
-#### 3.PX4与Turtlebot3联合
+## 3.PX4与Turtlebot3联合
 
 将posix_sitl.launch移动到PX4_Firmware/launch中，替换原来的文件，并注意将第47行的USERNAME改为自己的用户名
 
 ## 4.仿真启动步骤
+启动无人机与地面小车
 ```
 cd ~/Firmware
 DONT_RUN=1 make px4_sitl_default gazebo
@@ -66,3 +67,8 @@ export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)/Tools/sitl_gazebo
 roslaunch px4 mavros_posix_sitl.launch
 ```
+新开终端，运行控制小车的节点
+```
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+```
+也可以写程序控制小车移动，需要在工作空间内新建ros包，可参考turtlebot3_ctrl包
