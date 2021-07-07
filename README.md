@@ -1,5 +1,10 @@
 # LandOnMovingVehicle  
 
+## 0.ROS Melodic（推荐）安装
+http://wiki.ros.org/melodic/Installation/Ubuntu
+
+注意，与Melodic匹配的Ubuntu系统为18，如果安装其他版本的Ubuntu，请安装对应版本的ROS
+
 ## 1.PX4配置  
 
 #### 1.Download PX4 Source Code  
